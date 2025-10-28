@@ -7,6 +7,7 @@
     <link href="css/skip-nav.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=star" />
+    
     <style>
         body{
             font-family: 'PT Serif', serif;
@@ -79,6 +80,26 @@
         max-height: 1000px; /* any large number (bigger than the .inputRequirements*/
         transition: max-height 1s ease-in;
     }
+
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.skip-link {
+    background: black;
+    color: #fff;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(-100%);
+}
+
+.skip-link {
+    /* Same as before */
+    transition: transform 0.3s;
+}
     </style>
 </head>
 <body>
