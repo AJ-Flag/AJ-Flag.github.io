@@ -10,7 +10,7 @@
 }
 
 body {
-  background: yellow;
+  background: black;
   font-family: "PT Serif", serif;
   font-weight: 300;
   font-size: 15px;
@@ -54,7 +54,7 @@ footer {
   text-align: center;
 }
 
-/* .container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   background: rgb(13, 34, 64);
@@ -70,7 +70,7 @@ footer {
   "aside1    mainy     aside2"
   "aside1    mainy     aside2"
   "footy     footy     footy";
-} */
+}
 
 .center {
   display: grid;
@@ -95,7 +95,7 @@ footer {
   "footy     footy     footy";
 } */
 
-.container {
+/* .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas:
@@ -107,7 +107,7 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
-}
+} */
 
 header {grid-area: heady; background:rgb(13, 34, 64);}
 nav {grid-area: navvy; background:rgb(249, 249, 249);;}
@@ -116,23 +116,23 @@ main {grid-area: mainy; background: rgb(13, 34, 64); max-height: 100%;}
 #aside2 {grid-area: aside2; background: rgb(13, 34, 64);;}
 footer {grid-area: footy; background: rgb(171, 171, 171);}
 
-/* nav ul {
+nav ul {
 display: flex;
 flex-flow: row nowrap;
 justify-content: space-around;
-} */
+}
 
-nav ul {
+/* nav ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
   list-style: none;
   padding: 0.5em;
-}
-
-/* nav ul li {
-  list-style: none
 } */
+
+nav ul li {
+  list-style: none
+}
 
 nav ul li a {
   text-decoration: none;
