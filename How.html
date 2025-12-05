@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&family=PT+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, 
+    *::before, 
+    *::after 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    p 
+    {
+      text-indent: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+
+    body 
+    {
+      background: #0d2240;
+      color: white;
+      font-family: "PT Serif", serif;
+      line-height: 1.6;
+    }
+
+    h1, 
+    h2, 
+    h3, 
+    h4 
+    {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .container 
+    {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 3fr 2fr;
+      grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "left main right"
+        "WCfooter WCfooter WCfooter"
+        "footer footer footer";
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .hanging 
+    {
+      padding-left: 2rem;      
+      text-indent: -2rem;      
+      margin-bottom: 1rem;    
+    }
+
+    header 
+    { 
+        grid-area: header; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+     }
+
+    nav 
+    { 
+        grid-area: nav; 
+        background: #fafafa; 
+        padding: 1rem; 
+        border: 3px solid #8b2332; 
+    }
+
+    main 
+    { 
+        grid-area: main; 
+        background: #fafafa; 
+        padding: 1.5rem; border: 3px solid #8b2332; 
+        color: black;
+    }
+
+    aside.left 
+    { 
+        grid-area: left; 
+        background: #fafafa; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332;
+        color: black;
+    }
+
+    aside.right 
+    { grid-area: right; 
+        background: #fafafa; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332;
+        color: black;
+    }
+
+    footer 
+    { 
+        grid-area: footer; 
+        background: #a8a8a8; 
+        padding: 1.5rem; text-align: center; 
+        color: black; 
+        border: 3px solid #8b2332; 
+    }
+
+    .WCfooter
+    { 
+        grid-area: WCfooter; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+        font-family: "PT Serif", serif;
+     }
+
+  
+    nav ul 
+    {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a 
+    {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,0,0,0.1);
+    }
+
+    
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "main main"
+          "left right"
+          "WCfooter WCfooter"
+          "footer footer";
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "left"
+          "right"
+          "WCfooter"
+          "footer";
+      }
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: block;
+        border: 1px solid black;
+        background: white;
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
+
+  <title>Project 2</title>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>How?</h1>
+</header>
+
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Why</a></li>
+<li><a href="#">What</a></li>
+<li><a href="#">How</a></li>
+</ul>
+</nav>
+
+
+<aside class="left">
+<h2>Principles of page design</h2>
+<p>Contents to a webpage should be easy to digest.  If needing to navigate a site it should be easy for a user to do so.  Also, keeping
+    in line where certain elements should be, like having the "About Us" link at the bottom of every page.  
+</p>
+
+
+  <h3>Home Page</h3>
+      <p>A home page shouldn't be littered with links and tons of images.  It should be concise with it's point and navigation.</p>
+  
+    
+  <h3>Navigation</h3>
+      <p>This step is essential in website design; if it becomes overly confusing, users are unlikely to continue using the interface.
+        If users can sense progress from one step to the next and can feel that they're making their way to their final goal, then they'll
+        remain on a site.
+      </p>
+  
+
+    <h3>Common Elements</h3>
+      <p>This part requires consistency across the entire page.  Having the site's logo appear in the top right/left corner to indicate
+        possesion of site.  Typically have the header be the place to find navigation tools like links or search bars. An additional element
+        is the footer having items like "Credits" or "Terms & Conditions".
+      </p>
+ 
+    <h3>Context</h3>
+      <p>Two of the main things a site should be able to complete is relevant content and headings.  Relevant content should be special
+        for each site.  Headings should be used to grab attention and show what the upcoming content is about like how the word "Context" is big and bold.
+      </p>
+
+
+
+</aside>
+
+
+<main>
+<h2>Overview</h2>
+<p><em>How</em> to design a website?
+Designing a website means to have a purpose and the funcionality be comprehendable.  All while making everything accessible.</p>
+
+<p>To design a good website means to follow the guidelines off the principles of page design.  Components such as <strong>Home Page</strong>,
+    <strong>Navigation</strong>, <strong>Common Elements</strong>, and <strong>Context</strong> need to be considered for every page on every site.
+    There's numerous tools to make internet usage accessible for everyone, one of the most commercialized tool is the <strong>screen reader</strong>.
+    A page should make the employment of screen readers smooth so the tool doesn't skip a beat with translating text to speech.
+</p>
+</main>
+
+
+<aside class="right">
+<h2>Screen Readers</h2>
+<p>This tool translates on screen text to an audible speech pattern played through one's speakers or headphones.  People with visual
+    impairments benefit from screen readers as they're able to understand a page's content.  Additionally, people with age-related impairments, 
+    health condtions, and/or anyone who perfers an audio median than a visual one will usually perfer screen readers.
+</p>
+
+<h3>Popular Screen Readers</h3>
+    <ul>
+        <li>Jaws</li>
+        <li>Microsoft Narrator</li>
+        <li>ChromeVox</li>
+        <li>VoiceOver</li>
+        <li>NonVisual Desktop</li>
+    </ul>
+
+
+</aside>
+
+<!-- <aside class="WCfooter">
+
+<h2>Works Cited</h2>
+
+</aside> -->
+
+<section class="WCfooter">
+<h2>Works Cited</h2>
+
+<p class="hanging"> <em>Thompson, George. “Screenreader Comparisons - Perkins School for the Blind.” Screenreader Comparisons, www.perkins.org/resource/screenreader-comparisons/. Accessed 5 Dec. 2025.</em></p>
+
+<p class="hanging"> <em>“What Does a Good Web Page Need.” What Does a Good Web Page Need - W3C Wiki, 14 Mar. 2014, www.w3.org/wiki/What_does_a_good_web_page_need.
+</em></p>
+
+
+
+
+
+</section>
+
+
+
+<footer>
+<p>&copy; 2025 AJ Flageolle</p>
+</footer>
+</div>
+
+</body>
+</html>

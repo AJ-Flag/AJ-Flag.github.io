@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&family=PT+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, 
+    *::before, 
+    *::after 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    p 
+    {
+      text-indent: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+
+    body 
+    {
+      background: #0d2240;
+      color: white;
+      font-family: "PT Serif", serif;
+      line-height: 1.6;
+    }
+
+    h1, 
+    h2, 
+    h3, 
+    h4 
+    {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .container 
+    {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 3fr 2fr;
+      grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "left main right"
+        "WCfooter WCfooter WCfooter"
+        "footer footer footer";
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .hanging 
+    {
+      padding-left: 2rem;      
+      text-indent: -2rem;      
+      margin-bottom: 1rem;    
+    }
+
+    header 
+    { 
+        grid-area: header; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+     }
+
+    nav 
+    { 
+        grid-area: nav; 
+        background: #fafafa; 
+        padding: 1rem; 
+        border: 3px solid #8b2332; 
+    }
+
+    main 
+    { 
+        grid-area: main; 
+        background: #fafafa; 
+        padding: 1.5rem; border: 3px solid #8b2332; 
+        color: black;
+    }
+
+    aside.left 
+    { 
+        grid-area: left; 
+        background: #fafafa; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332;
+        color: black;
+    }
+
+    aside.right 
+    { grid-area: right; 
+        background: #fafafa; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332;
+        color: black;
+    }
+
+    footer 
+    { 
+        grid-area: footer; 
+        background: #a8a8a8; 
+        padding: 1.5rem; text-align: center; 
+        color: black; 
+        border: 3px solid #8b2332; 
+    }
+
+    .WCfooter
+    { 
+        grid-area: WCfooter; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+        font-family: "PT Serif", serif;
+     }
+
+  
+    nav ul 
+    {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a 
+    {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,0,0,0.1);
+    }
+
+    
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "main main"
+          "left right"
+          "WCfooter WCfooter"
+          "footer footer";
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "left"
+          "right"
+          "WCfooter"
+          "footer";
+      }
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: block;
+        border: 1px solid black;
+        background: white;
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
+
+  <title>Project 2</title>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>What?</h1>
+</header>
+
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Why</a></li>
+<li><a href="#">What</a></li>
+<li><a href="#">How</a></li>
+</ul>
+</nav>
+
+
+<aside class="left">
+<h2>7 Principles of Universal Design</h2>
+<p>These are the pillars that define universal design.  It's motive is to direct the design of environments, products, and communications.
+    The purpose is to inform the design process in ways that enhance usability across diverse user groups.</p>
+
+
+  <h3>Principle 1: Equitable Use</h3>
+      <p>The design is useful and marketable to people with diverse abilities.</p>
+  
+    
+  <h3>Principle 2: Flexibility in Use</h3>
+      <p>The design accommodates a wide range of individual preferences and abilities.</p>
+  
+
+  <h3>Principle 3: Simple and Intuitive Use</h3>
+      <p>Use of the design is easy to understand, regardless of the user's experience, knowledge, language skills, or current concentration level.</p>
+
+    <h3>Principle 4: Perceptible Information</h3>
+    <p>The design communicates necessary information effectively to the user, regardless of ambient conditions or the user's sensory abilities.</p>
+
+    <h3>Principle 5: Tolerance for Error</h3>
+    <p>The design minimizes hazards and the adverse consequences of accidental or unintended actions.</p>
+
+    <h3>Principle 6: Low Physical Effort</h3>
+    <p>The design can be used efficiently and comfortably and with a minimum fatigue.</p>
+
+    <h3>Principle 7: Size and Space for Approach and Use</h3>
+    <p>Appropriate size and space is provided for approach, reach, manipulation, and use regardless of user's body size, posture, or mobility.</p>
+
+
+
+</aside>
+
+
+<main>
+<h2>Overview</h2>
+<p><em>What</em> does it mean to design universally?
+To design universally means following certain guidelines to guarantee accessibility.</p>
+
+<p>Using the 7 Principles of Universal Design helps to ensure a design that is used efficiently.  In this case, efficiently means to
+    have little to no confusion when using said design.  Another few rules is to follow is the Norman's Design Concepts.  These concepts have been shown to help users more easily engage with a design's 
+    intended functions.
+</p>
+</main>
+
+
+<aside class="right">
+<h2>Norman's Design Concepts</h2>
+<p>These design concepts are simply guidelines into making anything as less confusion as possible.  The ideas of <strong>Affordance</strong>,
+    <strong>Constraints</strong>, <strong>Feedback</strong>, <strong>Visibility</strong>, and <strong>Mapping</strong> are used to verify that
+    an object or thing can be used clearly.  The capacity for efficient use is a core indicator of effective and well-executed design.</p>
+
+<h3>Affordance</h3>
+<p>A design is clearly visible to the user and matches the functional objective.</p>
+
+<h3>Constraints</h3>
+<p>Restrict user interaction to make certain the user does not operate past its intended function.</p>
+
+<h3>Feedback</h3>
+<p>To provide feedback that confirms the user's action and indicates that it was successfully completed.</p>
+
+<h3>Visibility</h3>
+<p>Functions that are visible to the user.  The user will likely know what to do next based off what they see.</p>
+
+<h3>Mapping</h3>
+<p>The proximity of the controls corresponds logically to their intended effects.  For example, on a TV remote having a plus symbol
+    '+' and minus symbol '-' to indicate decreasing and increasing the TV volume.</p>
+
+
+</aside>
+
+<!-- <aside class="WCfooter">
+
+<h2>Works Cited</h2>
+
+</aside> -->
+
+<section class="WCfooter">
+<h2>Works Cited</h2>
+
+<p class="hanging"> <em>“The 7 Principles.” Centre for Excellence in Universal Design, universaldesign.ie/about-universal-design/the-7-principles. Accessed 5 Dec. 2025.</em></p>
+
+<p class="hanging"> <em>Norman, Don. “Don Normans Principles of Design.” Design Principles, Don Norman, 20 Mar. 2024, principles.design/examples/don-norman-s-principles-of-design.</em></p>
+
+
+
+
+
+</section>
+
+
+
+<footer>
+<p>&copy; 2025 AJ Flageolle</p>
+</footer>
+</div>
+
+</body>
+</html>

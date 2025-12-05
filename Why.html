@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&family=PT+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, 
+    *::before, 
+    *::after 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    p 
+    {
+      text-indent: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+
+    body 
+    {
+      background: #0d2240;
+      color: white;
+      font-family: "PT Serif", serif;
+      line-height: 1.6;
+    }
+
+    h1, 
+    h2, 
+    h3, 
+    h4 
+    {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .container 
+    {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 3fr 2fr;
+      grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "left main right"
+        "WCfooter WCfooter WCfooter"
+        "footer footer footer";
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .hanging 
+    {
+      padding-left: 2rem;      
+      text-indent: -2rem;      
+      margin-bottom: 1rem;    
+    }
+
+    header 
+    { 
+        grid-area: header; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+     }
+
+    nav 
+    { 
+        grid-area: nav; 
+        background: #fafafa; 
+        padding: 1rem; 
+        border: 3px solid #8b2332; 
+    }
+
+    main 
+    { 
+        grid-area: main; 
+        background: #fafafa; 
+        padding: 1.5rem; border: 3px solid #8b2332; 
+        color: black;
+    }
+
+    aside.left 
+    { 
+        grid-area: left; 
+        background: #fafafa; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332;
+        color: black;
+    }
+
+    aside.right 
+    { grid-area: right; 
+        background: #fafafa; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332;
+        color: black;
+    }
+
+    footer 
+    { 
+        grid-area: footer; 
+        background: #a8a8a8; 
+        padding: 1.5rem; text-align: center; 
+        color: black; 
+        border: 3px solid #8b2332; 
+    }
+
+    .WCfooter
+    { 
+        grid-area: WCfooter; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+        font-family: "PT Serif", serif;
+     }
+
+  
+    nav ul 
+    {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a 
+    {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,0,0,0.1);
+    }
+
+    
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "main main"
+          "left right"
+          "WCfooter WCfooter"
+          "footer footer";
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "left"
+          "right"
+          "WCfooter"
+          "footer";
+      }
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: block;
+        border: 1px solid black;
+        background: white;
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
+
+  <title>Project 2</title>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>Why?</h1>
+</header>
+
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Why</a></li>
+<li><a href="#">What</a></li>
+<li><a href="#">How</a></li>
+</ul>
+</nav>
+
+
+<aside class="left">
+<h2>Diverse Abilities</h2>
+<p>People may be born with disabilities or acquire them sometime in their life.  There's a broad spectrum of disabilites and it's
+important to try to accommodate as many of them as possible.  These are just a few of the numerous diverse abilities out there.</p>
+
+
+  <h3>Health Conditions:</h3>
+      <p>Stamina, dexterity, or concentration are some health conditions that affect a person's physical ability to operate their device.
+      This could seriously limit their extent of their use of digital technology</p>
+  
+    
+  <h3>Multiple Disabilites:</h3>
+      <p>A person could have a collective amount of disabilities that could damper their functions.  With this in mind, their approach to the
+      use of technology narrows.</p>
+  
+
+  <h3>Age-Related Impairments</h3>
+      <p>The attitude towards treating other disabilites' accommodations is typically the same for people with age-related impairments.
+      A difference though is the median of assistive technology and the use of digital technology.</p>
+
+
+
+</aside>
+
+
+<main>
+<h2>Explaination</h2>
+<p>Universal design should be a core principle to everything created, especially websites.</p>
+<p>The idea of <em>why</em> it should be a core principle is that when anybody can use it everybody will use it.
+So, being well aware of what kind of diverse abilities are out there is important.  It's important to understand what kind of struggles
+people go through to use websites.  For example, a person with a health condition that is unable to operate a desktop so trying a mobile setup
+could be extremely helpful.</p>
+
+<p>Expanding accessibility to a broader audience inherently increases the likelihood that the project will be widely utilized.
+When looking at the United States, there's about 100 million people who have a disability.  Creating accessible things, like websites,
+let's those people have the same opportunity as everyone else.</p>
+</main>
+
+
+<aside class="right">
+<h2>Disability Demographic</h2>
+<p>These are the demographics for the technology users in the United States.</p>
+
+<table>
+            <!-- <caption>Technology users in the United States</caption> -->
+        
+        <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">People</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr>
+            <th scope="row">Internet Users</th>
+            <td>313 million users / 90.2%</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Individuals with Disabilities</th>
+            <td>100 million people / 28.7%</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Vision Impairments</th>
+            <td>18.98 million people / 5.5%</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Mobility Impairments</th>
+            <td>42.4 million people / 12.2%</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Hearing Impairments</th>
+            <td>21.52 million people / 6.2%</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Learning Disabilities</th>
+            <td>47.87 million people / 13.9%</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</aside>
+
+<!-- <aside class="WCfooter">
+
+<h2>Works Cited</h2>
+
+</aside> -->
+
+<section class="WCfooter">
+<h2>Works Cited</h2>
+
+<p class="hanging"> <em>CDC. “Disability Impacts All of Us Infographic.” Disability and Health, CDC, 10 Dec. 2024, 
+    www.cdc.gov/disability-and-health/articles-documents/disability-impacts-all-of-us-infogr aphic.html.</em></p>
+
+<p class="hanging"> <em>Johnson, Joseph. “U.S: Numer of Internet Users | Statista.” Statista, Statista, 4 Aug. 2021, www.statista.com/statistics/325645/usa-number-of-internet-users/.
+</em></p>
+
+<p class="hanging"> <em>Korhonen, Veera. “Population of the U.S. by Sex and Age 2023.” Statista, statista.com, 20 Aug. 2024, www.statista.com/statistics/241488/population-of-the-us-by-sex-and-age/.
+</em></p>
+
+<p class="hanging"> <em>(WAI), W3C Web Accessibility Initiative. “Diverse Abilities and Barriers.” Web Accessibility Initiative (WAI), 25 June 2024, www.w3.org/WAI/people-use-web/abilities-barriers/.
+</em></p>
+
+<p class="hanging"> <em>“Internet Users by Country 2021.” Worldpopulationreview.com, 2021, worldpopulationreview.com/country-rankings/internet-users-by-country.</em></p>
+
+
+</section>
+
+
+
+<footer>
+<p>&copy; 2025 AJ Flageolle</p>
+</footer>
+</div>
+
+</body>
+</html>
