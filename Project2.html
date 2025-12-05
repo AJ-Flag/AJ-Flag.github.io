@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&family=PT+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, 
+    *::before, 
+    *::after 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body 
+    {
+      background: #0d2240;
+      color: white;
+      font-family: "PT Serif", serif;
+      line-height: 1.6;
+    }
+
+    h1, 
+    h2, 
+    h3, 
+    h4 
+    {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .container 
+    {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    header 
+    { 
+        grid-area: header; 
+        background: #fafafa; 
+        padding: 1.5rem; text-align: center; 
+        border: 3px solid #8b2332;
+        color: black;
+     }
+
+    nav 
+    { 
+        grid-area: nav; 
+        background: #fafafa; 
+        padding: 1rem; 
+        border: 3px solid #8b2332; 
+    }
+
+    main 
+    { 
+        grid-area: main; 
+        background: #fafafa; 
+        padding: 1.5rem; border: 3px solid #8b2332; 
+        color: black;
+    }
+
+    aside.left 
+    { 
+        grid-area: left; 
+        background: #0f2d55; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332; 
+    }
+
+    aside.right 
+    { grid-area: right; 
+        background: #0f2d55; 
+        padding: 1.5rem; 
+        border: 3px solid #8b2332; 
+    }
+
+    footer 
+    { 
+        grid-area: footer; 
+        background: #a8a8a8; 
+        padding: 1.5rem; text-align: center; 
+        color: black; 
+        border: 3px solid #8b2332; 
+    }
+
+  
+    nav ul 
+    {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a 
+    {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,0,0,0.1);
+    }
+
+    
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "main main"
+          "left right"
+          "footer footer";
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "left"
+          "right"
+          "footer";
+      }
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: block;
+        border: 1px solid black;
+        background: white;
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
+
+  <title>Project 2</title>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Universally Designed Educational Website on Accessibility</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Why</a></li>
+      <li><a href="#">What</a></li>
+      <li><a href="#">How</a></li>
+    </ul>
+  </nav>
+
+  
+
+  <main>
+    <h2>About this page</h2>
+
+    <h3>Why?</h3>
+
+    <p> Universal design should be a core principle to everything created, especially websites.  The idea of <em>why</em> it should</p>
+    <p>be a core principle is that when anybody can use it everybody will use it.  Reaching to all audiences of people will make almost</p>
+    <p>get attention.  For example, closed captions began with the intention to assist people who have hearing impairments but now</p>
+    <p>people use it when they're in a noisy environment, trying to learn a new language, people that simply want to read along, etc.</p>
+    <p>In general, it's the right thing to do.</p>
+
+    <h3>What?</h3>
+
+    <p><em>What</em> does it mean to design universally?  It means to design with diversity in mind to begin with.  Diversity for those</p>
+    <p>who're able and disabled.  A design that can be accused to anyone who wishes to use it and that doesn't disclude a certain type </p>
+    <p>or group of people, it only includes everybody.  It's something that is considered morally good and is a practice of good design.</p>
+
+    <h3>How?</h3>
+
+    <p><em>How</em> to design a website technically?  To design a good website for everybody it means to make sure there's nothing that makes</p>
+    <p>it difficult for people to view and technically use the site.  For the visablly impaired, there should be nothing that causes any strain</p>
+    <p>when trying to physically view a website.  Next is designing any page so a screen reader can work effectively on it.</p>
+    <p>Finally, mapping out all pages to a site is crucial so nothing looks confusing and can be easily interpreted.</p>
+  </main>
+
+
+
+  <footer>
+    <p>&copy; 2025 AJ Flageolle</p>
+  </footer>
+</div>
+
+</body>
+</html>
